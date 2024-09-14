@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import isNil from 'lodash/isNil';
+import { isNil } from 'es-toolkit/compat';
 import { ReactElement } from 'react';
 import { Series } from 'victory-vendor/d3-shape';
 import { RechartsRootState } from '../store';

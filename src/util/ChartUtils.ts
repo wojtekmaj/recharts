@@ -1,14 +1,4 @@
-import flatMap from 'lodash/flatMap';
-import get from 'lodash/get';
-import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
-import isNan from 'lodash/isNaN';
-import isNil from 'lodash/isNil';
-import isString from 'lodash/isString';
-import max from 'lodash/max';
-import min from 'lodash/min';
-import sortBy from 'lodash/sortBy';
-import upperFirst from 'lodash/upperFirst';
+import { flatMap, get, isEqual, isFunction, isNil, isString, max, min, sortBy, upperFirst } from 'es-toolkit/compat';
 import * as d3Scales from 'victory-vendor/d3-scale';
 import {
   Series,
@@ -606,7 +596,7 @@ export const getTicksOfAxis = (
       };
     });
 
-    return result.filter((row: TickItem) => !isNan(row.coordinate));
+    return result.filter((row: TickItem) => !Number.isNaN(row.coordinate));
   }
 
   // When axis is a categorical axis, but the type of axis is number or the scale of axis is not "auto"
@@ -805,7 +795,7 @@ export const offsetSign: OffsetAccessor = series => {
     let negative = 0;
 
     for (let i = 0; i < n; ++i) {
-      const value = isNan(series[i][j][1]) ? series[i][j][0] : series[i][j][1];
+      const value = Number.isNaN(series[i][j][1]) ? series[i][j][0] : series[i][j][1];
 
       /* eslint-disable prefer-destructuring, no-param-reassign */
       if (value >= 0) {
@@ -840,7 +830,7 @@ export const offsetPositive: OffsetAccessor = series => {
     let positive = 0;
 
     for (let i = 0; i < n; ++i) {
-      const value = isNan(series[i][j][1]) ? series[i][j][0] : series[i][j][1];
+      const value = Number.isNaN(series[i][j][1]) ? series[i][j][0] : series[i][j][1];
 
       /* eslint-disable prefer-destructuring, no-param-reassign */
       if (value >= 0) {

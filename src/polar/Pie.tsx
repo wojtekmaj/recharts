@@ -1,9 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import React, { PureComponent, ReactElement, ReactNode, SVGProps, useMemo } from 'react';
 import Animate from 'react-smooth';
-import get from 'lodash/get';
-import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
+import { get, isEqual, isFunction } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { ResolvedPieSettings, selectPieLegend, selectPieSectors } from '../state/selectors/pieSelectors';

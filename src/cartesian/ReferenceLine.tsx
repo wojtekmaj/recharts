@@ -2,8 +2,7 @@
  * @fileOverview Reference Line
  */
 import React, { Component, ReactElement, SVGProps, useEffect } from 'react';
-import isFunction from 'lodash/isFunction';
-import some from 'lodash/some';
+import { isFunction, some } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { Layer } from '../container/Layer';
 import { ImplicitLabelType, Label } from '../component/Label';

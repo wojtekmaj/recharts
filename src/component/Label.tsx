@@ -1,7 +1,5 @@
 import React, { cloneElement, isValidElement, ReactNode, ReactElement, createElement, SVGProps } from 'react';
-import isNil from 'lodash/isNil';
-import isFunction from 'lodash/isFunction';
-import isObject from 'lodash/isObject';
+import { isNil, isFunction, isObject } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { Text } from './Text';
 import { findAllByType, filterProps } from '../util/ReactUtils';

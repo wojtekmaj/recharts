@@ -1,11 +1,7 @@
 // eslint-disable-next-line max-classes-per-file
 import React, { PureComponent, ReactElement, MouseEvent, SVGProps } from 'react';
 import Animate from 'react-smooth';
-import isNil from 'lodash/isNil';
-import last from 'lodash/last';
-import first from 'lodash/first';
-import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
+import { isNil, last, first, isEqual, isFunction } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { interpolateNumber } from '../util/DataUtils';

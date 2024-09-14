@@ -1,11 +1,7 @@
 /* eslint-disable max-classes-per-file */
 import React, { PureComponent, ReactElement } from 'react';
 import Animate from 'react-smooth';
-import isFunction from 'lodash/isFunction';
-import isNumber from 'lodash/isNumber';
-import isString from 'lodash/isString';
-import omit from 'lodash/omit';
-import isEqual from 'lodash/isEqual';
+import { isEqual, isFunction, isString, omit } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { selectActiveIndex } from '../state/selectors/selectors';
@@ -189,7 +185,7 @@ const getRealWidthHeight = ({ customWidth }: { customWidth: number | string }, o
   const realHeight = height;
   let realWidth = width;
 
-  if (isNumber(customWidth)) {
+  if (typeof (customWidth) === 'number') {
     realWidth = customWidth;
   } else if (isString(customWidth)) {
     realWidth = (realWidth * parseFloat(customWidth)) / 100;

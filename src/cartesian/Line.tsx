@@ -4,9 +4,7 @@
 // eslint-disable-next-line max-classes-per-file
 import React, { Component, PureComponent } from 'react';
 import Animate from 'react-smooth';
-import isFunction from 'lodash/isFunction';
-import isNil from 'lodash/isNil';
-import isEqual from 'lodash/isEqual';
+import { isEqual, isFunction, isNil } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { Curve, CurveType, Point as CurvePoint, Props as CurveProps } from '../shape/Curve';

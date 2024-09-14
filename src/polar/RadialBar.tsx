@@ -4,8 +4,7 @@
 import React, { PureComponent, ReactElement } from 'react';
 import clsx from 'clsx';
 import Animate from 'react-smooth';
-import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
+import { isEqual, isFunction } from 'es-toolkit/compat';
 
 import { parseCornerRadius, RadialBarSector, RadialBarSectorProps } from '../util/RadialBarUtils';
 import { Props as SectorProps } from '../shape/Sector';

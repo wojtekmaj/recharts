@@ -23,7 +23,7 @@ import {
   WheelEvent,
   JSX,
 } from 'react';
-import isObject from 'lodash/isObject';
+import { isObject } from 'es-toolkit/compat';
 import { ScaleContinuousNumeric as D3ScaleContinuousNumeric } from 'victory-vendor/d3-scale';
 import { PolarAngleAxisProps } from '../polar/PolarAngleAxis';
 import { PolarRadiusAxisProps } from '../polar/PolarRadiusAxis';

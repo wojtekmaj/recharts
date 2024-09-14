@@ -1,5 +1,4 @@
-import uniqBy from 'lodash/uniqBy';
-import isFunction from 'lodash/isFunction';
+import { uniqBy, isFunction } from 'es-toolkit/compat';
 
 type UniqueFunc<T> = (entry: T) => unknown;
 

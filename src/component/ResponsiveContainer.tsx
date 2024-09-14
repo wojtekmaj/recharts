@@ -14,7 +14,7 @@ import React, {
   CSSProperties,
   useCallback,
 } from 'react';
-import throttle from 'lodash/throttle';
+import { throttle } from 'es-toolkit/compat';
 import { isElement } from 'react-is';
 import { isPercent } from '../util/DataUtils';
 import { warn } from '../util/LogUtils';

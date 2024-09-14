@@ -2,7 +2,7 @@
  * @fileOverview Cartesian Grid
  */
 import React, { ReactElement, SVGProps } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'es-toolkit/compat';
 
 import { warn } from '../util/LogUtils';
 import { isNumber } from '../util/DataUtils';

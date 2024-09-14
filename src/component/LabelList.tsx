@@ -1,8 +1,5 @@
 import React, { cloneElement, ReactElement, ReactNode, SVGProps } from 'react';
-import isNil from 'lodash/isNil';
-import isObject from 'lodash/isObject';
-import isFunction from 'lodash/isFunction';
-import last from 'lodash/last';
+import { isNil, isObject, isFunction, last } from 'es-toolkit/compat';
 
 import { Label, ContentType, Props as LabelProps, LabelPosition } from './Label';
 import { Layer } from '../container/Layer';

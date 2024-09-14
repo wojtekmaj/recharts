@@ -5,9 +5,7 @@
 import React, { Component, PureComponent, ReactElement, useMemo } from 'react';
 import Animate from 'react-smooth';
 
-import isNil from 'lodash/isNil';
-import isEqual from 'lodash/isEqual';
-import isFunction from 'lodash/isFunction';
+import { isEqual, isFunction, isNil } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { Layer } from '../container/Layer';
 import { ImplicitLabelListType, LabelList } from '../component/LabelList';

@@ -1,7 +1,4 @@
-import isString from 'lodash/isString';
-import isNan from 'lodash/isNaN';
-import get from 'lodash/get';
-import lodashIsNumber from 'lodash/isNumber';
+import { isString, get, isNumber as lodashIsNumber } from 'es-toolkit/compat';
 
 export const mathSign = (value: number) => {
   if (value === 0) {
@@ -17,7 +14,7 @@ export const mathSign = (value: number) => {
 export const isPercent = (value: string | number): value is `${number}%` =>
   isString(value) && value.indexOf('%') === value.length - 1;
 
-export const isNumber = (value: unknown): value is number => lodashIsNumber(value) && !isNan(value);
+export const isNumber = (value: unknown): value is number => lodashIsNumber(value) && !Number.isNaN(value);
 
 export const isNumOrStr = (value: unknown): value is number | string => isNumber(value as number) || isString(value);
 
@@ -50,7 +47,7 @@ export const getPercentValue = (percent: number | string, totalValue: number, de
     value = +percent;
   }
 
-  if (isNan(value)) {
+  if (Number.isNaN(value)) {
     value = defaultValue;
   }
 

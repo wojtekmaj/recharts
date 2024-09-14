@@ -1,8 +1,4 @@
-import get from 'lodash/get';
-import isNil from 'lodash/isNil';
-import isString from 'lodash/isString';
-import isFunction from 'lodash/isFunction';
-import isObject from 'lodash/isObject';
+import { get, isNil, isString, isFunction, isObject } from 'es-toolkit/compat';
 
 import React, { Children, Component, FunctionComponent, isValidElement, ReactNode } from 'react';
 import { isFragment } from 'react-is';

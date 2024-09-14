@@ -16,8 +16,7 @@ import React, {
 } from 'react';
 import clsx from 'clsx';
 import { scalePoint, ScalePoint } from 'victory-vendor/d3-scale';
-import isFunction from 'lodash/isFunction';
-import range from 'lodash/range';
+import { isFunction, range } from 'es-toolkit/compat';
 import { Layer } from '../container/Layer';
 import { Text } from '../component/Text';
 import { getValueByDataKey } from '../util/ChartUtils';

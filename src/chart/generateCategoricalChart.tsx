@@ -1,13 +1,6 @@
 import React, { cloneElement, Component, ReactElement } from 'react';
-import isNil from 'lodash/isNil';
-import isFunction from 'lodash/isFunction';
-import range from 'lodash/range';
-import get from 'lodash/get';
-import sortBy from 'lodash/sortBy';
-import throttle from 'lodash/throttle';
+import { get, isFunction, isNil, range, throttle, sortBy } from 'es-toolkit/compat';
 
-// eslint-disable-next-line no-restricted-imports
-import type { DebouncedFunc } from 'lodash';
 import invariant from 'tiny-invariant';
 import { LegendPortalContext } from '../context/legendPortalContext';
 import { Surface } from '../container/Surface';
@@ -117,6 +110,8 @@ export interface ChartPointer {
   chartX: number;
   chartY: number;
 }
+
+type ThrottledFunc<T extends (...args: any) => void> = ReturnType<typeof throttle<T>>;
 
 const ORIENT_MAP = {
   xAxis: ['bottom', 'top'],
@@ -1033,7 +1028,7 @@ export const generateCategoricalChart = ({
 
     accessibilityManager = new AccessibilityManager();
 
-    throttleTriggeredAfterMouseMove: DebouncedFunc<typeof CategoricalChartWrapper.prototype.triggeredAfterMouseMove>;
+    throttleTriggeredAfterMouseMove: ThrottledFunc<typeof CategoricalChartWrapper.prototype.triggeredAfterMouseMove>;
 
     // todo join specific chart propTypes
     static defaultProps: CategoricalChartProps = {

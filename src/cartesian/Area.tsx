@@ -2,11 +2,7 @@
 import React, { PureComponent } from 'react';
 import clsx from 'clsx';
 import Animate from 'react-smooth';
-import isFunction from 'lodash/isFunction';
-import max from 'lodash/max';
-import isNil from 'lodash/isNil';
-import isNan from 'lodash/isNaN';
-import isEqual from 'lodash/isEqual';
+import { isEqual, isFunction, isNil, max } from 'es-toolkit/compat';
 import { Curve, CurveType, Point as CurvePoint, Props as CurveProps } from '../shape/Curve';
 import { Dot } from '../shape/Dot';
 import { Layer } from '../container/Layer';
@@ -441,7 +437,7 @@ class AreaWithState extends PureComponent<InternalProps, State> {
             if (isNumber(baseLine) && typeof baseLine === 'number') {
               const interpolator = interpolateNumber(prevBaseLine as number, baseLine);
               stepBaseLine = interpolator(t);
-            } else if (isNil(baseLine) || isNan(baseLine)) {
+            } else if (isNil(baseLine) || Number.isNaN(baseLine)) {
               const interpolator = interpolateNumber(prevBaseLine as number, 0);
               stepBaseLine = interpolator(t);
             } else {

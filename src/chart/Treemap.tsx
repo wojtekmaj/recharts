@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react';
-import isNan from 'lodash/isNaN';
-import isFunction from 'lodash/isFunction';
-import omit from 'lodash/omit';
-import get from 'lodash/get';
+import { get, isFunction, omit } from 'es-toolkit/compat';
 import Smooth from 'react-smooth';
 
 import { Tooltip } from '../component/Tooltip';
@@ -119,7 +116,7 @@ export const computeNode = ({
     nodeValue = computedChildren.reduce((result: any, child: TreemapNode) => result + child[NODE_VALUE_KEY], 0);
   } else {
     // TODO need to verify dataKey
-    nodeValue = isNan(node[dataKey as string]) || node[dataKey as string] <= 0 ? 0 : node[dataKey as string];
+    nodeValue = Number.isNaN(node[dataKey as string]) || node[dataKey as string] <= 0 ? 0 : node[dataKey as string];
   }
 
   return {
@@ -145,7 +142,7 @@ const getAreaOfChildren = (children: ReadonlyArray<TreemapNode>, areaValueRatio:
 
     return {
       ...child,
-      area: isNan(area) || area <= 0 ? 0 : area,
+      area: Number.isNaN(area) || area <= 0 ? 0 : area,
     };
   });
 };

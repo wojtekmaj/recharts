@@ -1,5 +1,5 @@
 import React, { FunctionComponent, PureComponent, ReactElement, SVGProps, useEffect } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { Layer } from '../container/Layer';
 import { Dot } from '../shape/Dot';

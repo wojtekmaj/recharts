@@ -2,7 +2,7 @@
  * @fileOverview Customized
  */
 import React, { isValidElement, cloneElement, createElement, Component, FunctionComponent, ReactElement } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'es-toolkit/compat';
 
 import { Layer } from '../container/Layer';
 import { warn } from '../util/LogUtils';

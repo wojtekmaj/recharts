@@ -1,6 +1,5 @@
-import isNil from 'lodash/isNil';
 import { ReactElement, SVGProps, isValidElement } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isNil, isFunction } from 'es-toolkit/compat';
 import { getPercentValue } from './DataUtils';
 import { parseScale, checkDomainOfScale, getTicksOfScale } from './ChartUtils';
 import { Coordinate, ChartOffset, GeometrySector, RangeObj } from './types';

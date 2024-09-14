@@ -1,7 +1,5 @@
 import React, { FunctionComponent, PureComponent, ReactElement, useEffect } from 'react';
-import maxBy from 'lodash/maxBy';
-import minBy from 'lodash/minBy';
-import isFunction from 'lodash/isFunction';
+import { maxBy, minBy, isFunction } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { useMaybePolarRadiusAxis } from '../context/chartLayoutContext';
 import { Text } from '../component/Text';

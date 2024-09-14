@@ -1,7 +1,5 @@
 import { ReactElement } from 'react';
-import isNil from 'lodash/isNil';
-import min from 'lodash/min';
-import max from 'lodash/max';
+import { isNil, min, max } from 'es-toolkit/compat';
 import { AxisType, BaseAxisProps, CategoricalDomain, DataKey, LayoutType, NumberDomain } from './types';
 import { findAllByType } from './ReactUtils';
 import { ErrorBar } from '../cartesian/ErrorBar';

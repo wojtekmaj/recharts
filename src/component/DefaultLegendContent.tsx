@@ -2,7 +2,7 @@
  * @fileOverview Default Legend Content
  */
 import React, { PureComponent, ReactNode, MouseEvent, ReactText, ReactElement } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { warn } from '../util/LogUtils';

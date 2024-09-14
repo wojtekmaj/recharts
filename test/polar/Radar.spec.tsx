@@ -1,5 +1,5 @@
 import React from 'react';
-import uniqueId from 'lodash/uniqueId';
+import { randomUUID } from 'crypto';
 import { render, screen } from '@testing-library/react';
 
 import { Surface, Radar } from '../../src';
@@ -11,19 +11,19 @@ const CustomizedShape = ({ points }: { points: point[] }) => {
     '',
   );
 
-  return <path d={d} key={uniqueId()} data-testid="customized-shape" />;
+  return <path d={d} key={randomUUID()} data-testid="customized-shape" />;
 };
 
 const CustomizedLabel = () => {
   return (
-    <text key={uniqueId()} data-testid="customized-label">
+    <text key={randomUUID()} data-testid="customized-label">
       test
     </text>
   );
 };
 
 const CustomizedDot = ({ x, y }: point) => (
-  <circle key={uniqueId()} cx={x} cy={y} r={10} data-testid="customized-dot" />
+  <circle key={randomUUID()} cx={x} cy={y} r={10} data-testid="customized-dot" />
 );
 
 describe('<Radar />', () => {

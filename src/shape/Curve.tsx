@@ -20,8 +20,7 @@ import {
   curveStepAfter,
   curveStepBefore,
 } from 'victory-vendor/d3-shape';
-import upperFirst from 'lodash/upperFirst';
-import isFunction from 'lodash/isFunction';
+import { isFunction, upperFirst } from 'es-toolkit/compat';
 
 import clsx from 'clsx';
 import { LayoutType, PresentationAttributesWithProps, adaptEventHandlers } from '../util/types';

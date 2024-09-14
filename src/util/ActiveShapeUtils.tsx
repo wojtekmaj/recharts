@@ -1,7 +1,5 @@
 import React, { cloneElement, isValidElement, SVGProps } from 'react';
-import isFunction from 'lodash/isFunction';
-import isPlainObject from 'lodash/isPlainObject';
-import isBoolean from 'lodash/isBoolean';
+import { isFunction, isPlainObject, isBoolean } from 'es-toolkit/compat';
 
 import { Rectangle } from '../shape/Rectangle';
 import { Trapezoid } from '../shape/Trapezoid';

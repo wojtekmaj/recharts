@@ -3,8 +3,7 @@
  */
 
 import React, { CSSProperties, HTMLAttributes, ReactNode } from 'react';
-import sortBy from 'lodash/sortBy';
-import isNil from 'lodash/isNil';
+import { sortBy, isNil } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { isNumOrStr } from '../util/DataUtils';
 import { DataKey } from '../util/types';

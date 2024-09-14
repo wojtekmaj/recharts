@@ -1,6 +1,5 @@
 import React, { cloneElement, isValidElement } from 'react';
-import isFunction from 'lodash/isFunction';
-import isNil from 'lodash/isNil';
+import { isFunction, isNil } from 'es-toolkit/compat';
 import { ActiveDotType, adaptEventHandlers, DataKey } from '../util/types';
 import { filterProps } from '../util/ReactUtils';
 import { Dot, Props as DotProps } from '../shape/Dot';

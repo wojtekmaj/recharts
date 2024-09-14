@@ -1,9 +1,5 @@
 import React, { MouseEvent, PureComponent, ReactElement, SVGProps } from 'react';
-import maxBy from 'lodash/maxBy';
-import min from 'lodash/min';
-import get from 'lodash/get';
-import sumBy from 'lodash/sumBy';
-import isFunction from 'lodash/isFunction';
+import { get, isFunction, maxBy, min, sumBy } from 'es-toolkit/compat';
 
 import { Surface } from '../container/Surface';
 import { Layer } from '../container/Layer';

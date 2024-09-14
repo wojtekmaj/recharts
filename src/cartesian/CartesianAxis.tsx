@@ -3,8 +3,7 @@
  */
 import React, { ReactElement, ReactNode, Component, SVGProps } from 'react';
 
-import isFunction from 'lodash/isFunction';
-import get from 'lodash/get';
+import { get, isFunction } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { shallowEqual } from '../util/ShallowEqual';
 import { Layer } from '../container/Layer';

@@ -1,5 +1,5 @@
 import React, { Component, ReactElement, useEffect } from 'react';
-import isFunction from 'lodash/isFunction';
+import { isFunction } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { Layer } from '../container/Layer';
 import { ImplicitLabelType, Label } from '../component/Label';

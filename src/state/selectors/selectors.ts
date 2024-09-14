@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import sortBy from 'lodash/sortBy';
+import { sortBy } from 'es-toolkit/compat';
 import { useAppSelector } from '../hooks';
 import { RechartsRootState } from '../store';
 import {

@@ -1,6 +1,6 @@
 import React, { CSSProperties, SVGProps, useMemo } from 'react';
 
-import isNil from 'lodash/isNil';
+import { isNil } from 'es-toolkit/compat';
 import clsx from 'clsx';
 import { isNumber, isNumOrStr } from '../util/DataUtils';
 import { Global } from '../util/Global';
